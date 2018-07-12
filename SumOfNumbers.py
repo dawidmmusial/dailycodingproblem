@@ -18,8 +18,6 @@ def is_sum_on_list(list_in: list, k: int) -> bool:
 
 
 if __name__ == '__main__':
-    print(is_sum_on_list([10, 15, 3, 7], 17))
-    print(is_sum_on_list([10, 15, 3, 7], 10))
-    print(is_sum_on_list([10, 15, 3, 7], 14))
-
-    print(repeat(stmt=lambda: is_sum_on_list([10, 15, 3, 7], 17), number=20, repeat=3))
+    print(is_sum_on_list([10, 15, 3, 7], 17)) #True
+    print(is_sum_on_list([10, 15, 3, 7], 10)) #True
+    print(is_sum_on_list([10, 15, 3, 7], 14)) #False
