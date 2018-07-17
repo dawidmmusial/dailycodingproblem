@@ -6,7 +6,6 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 Follow-up: what if you can't use division?
 """
 from functools import reduce
-from operator import truediv
 
 def product_of_array(arr: list) -> list:
     sum_array = reduce(lambda x, y: x * y, arr)
@@ -15,6 +14,5 @@ def product_of_array(arr: list) -> list:
 
 
 if __name__ == '__main__':
-    print(product_of_array([1, 2, 3]))
-    # print(product_of_array([3, 2, 1]))
+    print(product_of_array([3, 2, 1]))
     print(product_of_array([1, 2, 3, 4, 5]))
