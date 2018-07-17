@@ -21,3 +21,4 @@ if __name__ == '__main__':
     arrs = ([3, 4, -1, 1], [1, 2, 0], [4, 2, 0, 3, 3])
     for arr in arrs:
         print(lowest_pos_val(arr))
+ 
