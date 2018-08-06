@@ -7,16 +7,19 @@ since we pick 5 and 5.
 """
 
 
-def sum_of_numbers(lst):
+def sum_of_numbers(lst: list) -> int:
     # assuming that the largest multiple of the list will be 13
     run = [2, 3, 5, 7, 11, 13]
     out = lst[0]
 
+    # two last value of the list doesn't meet the condition
     for i in range(len(lst)-2):
         for r in run:
+            # choose slice of the list
             if len(lst[i::r]) < 2:
                 break
             sum_list = sum(lst[i::r])
+            # save greatest value
             if out < sum_list:
                 out = sum_list
 
