@@ -6,19 +6,19 @@ You can modify the input array in-place.
 
 
 def lowest_pos_val(lst: list) -> int:
-    # use set to remove duplicates
-    pos_set = set(filter(lambda x: x > 0, sorted(lst)))
-
-    if len(pos_set) == list(pos_set)[-1]:
-        return list(pos_set)[-1]+1
+    # add 0 prevent indexing issue
+    lst.append(0)
+    # use set to remove duplicates, sort and put negative numbers at the end
+    pos_set = set(lst)
 
     for i, v in enumerate(pos_set):
-        if i + 1 != v:
-            return i + 1
+        if i != v:
+            return i
+    else:
+        return len(lst) - 1
 
 
 if __name__ == '__main__':
     arrs = ([3, 4, -1, 1], [1, 2, 0], [4, 2, 0, 3, 3])
     for arr in arrs:
         print(lowest_pos_val(arr))
- 
