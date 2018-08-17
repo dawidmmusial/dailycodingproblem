@@ -5,16 +5,15 @@ For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 
 Bonus: Can you do this in one pass?
 """
-from timeit import repeat
 
 
 def is_sum_on_list(list_in: list, k: int) -> bool:
-    for _ in list_in:
+    while len(list_in) > 0:
         x = list_in.pop()
-        if k in [x + y for y in list_in]:
+        if k - x in list_in:
             return True
-        else:
-            return False
+    else:
+        return False
 
 
 if __name__ == '__main__':
