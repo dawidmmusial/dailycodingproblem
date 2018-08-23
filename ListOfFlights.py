@@ -31,7 +31,7 @@ def fly_connection(connections: list, start_airport: str) -> list:
     if len(connections)+1 == len(airports):
         return airports
     else:
-        return None
+        return []
 
 
 if __name__ == '__main__':
